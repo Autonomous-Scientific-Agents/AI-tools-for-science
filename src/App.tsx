@@ -359,9 +359,10 @@ function DirectoryPage({
   return (
     <main>
       <section className="section-band">
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 py-8 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-          <div>
-            <div className="mb-4 flex flex-wrap gap-2">
+        <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6">
+          <h1 className="sr-only">AI Tools Directory</h1>
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-wrap gap-2">
               <span className="pill">
                 <Database className="h-3.5 w-3.5 text-spruce" />
                 {tools.length} tools
@@ -375,35 +376,32 @@ function DirectoryPage({
                 Checked {formatDate(newestDate)}
               </span>
             </div>
-            <h1 className="max-w-3xl text-3xl font-bold leading-tight sm:text-4xl">
-              AI tools for research and open science workflows
-            </h1>
-          </div>
-          <div className="panel p-3">
-            <div className="grid gap-3 sm:grid-cols-[1fr_180px]">
-              <label className="relative">
-                <Search className="pointer-events-none absolute left-3 top-3 h-5 w-5 text-ink/40" />
-                <input
-                  className="control pl-10"
-                  placeholder="Search tools, strengths, pricing"
-                  value={query}
-                  onChange={(event) => setQuery(event.target.value)}
-                />
-              </label>
-              <label className="relative">
-                <ListFilter className="pointer-events-none absolute left-3 top-3 h-5 w-5 text-ink/40" />
-                <select
-                  className="control pl-10"
-                  value={sort}
-                  onChange={(event) => setSort(event.target.value as SortKey)}
-                >
-                  {sortOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </label>
+            <div className="panel p-3">
+              <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_240px] lg:grid-cols-[minmax(0,1fr)_280px]">
+                <label className="relative">
+                  <Search className="pointer-events-none absolute left-3 top-3 h-5 w-5 text-ink/40" />
+                  <input
+                    className="control pl-10"
+                    placeholder="Search tools, strengths, pricing"
+                    value={query}
+                    onChange={(event) => setQuery(event.target.value)}
+                  />
+                </label>
+                <label className="relative">
+                  <ListFilter className="pointer-events-none absolute left-3 top-3 h-5 w-5 text-ink/40" />
+                  <select
+                    className="control pl-10"
+                    value={sort}
+                    onChange={(event) => setSort(event.target.value as SortKey)}
+                  >
+                    {sortOptions.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -414,7 +412,7 @@ function DirectoryPage({
             <button
               type="button"
               key={item}
-              className={`shrink-0 rounded-md border px-3 py-2 text-sm font-semibold transition ${
+              className={`min-w-24 shrink-0 rounded-md border px-4 py-2 text-sm font-semibold transition ${
                 category === item
                   ? "border-spruce bg-spruce text-white"
                   : "border-line bg-white text-ink hover:border-spruce/70"
