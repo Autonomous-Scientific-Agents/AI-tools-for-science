@@ -27,6 +27,17 @@ NS = {
     "rel": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
 }
 
+CATEGORY_MAP = {
+    "Academic & Science": "Science",
+    "Coding & Development": "Coding",
+    "General AI Assistants": "General",
+    "Notes & Knowledge": "Notes",
+    "Presentations & Content": "Presentations",
+    "Research & Search": "Research",
+    "Study & Writing": "Writing",
+    "Visual & Creative": "Visual",
+}
+
 
 def col_to_index(ref: str) -> int:
     letters = "".join(ch for ch in ref if ch.isalpha())
@@ -119,7 +130,10 @@ def normalize_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
                     uuid.uuid5(uuid.NAMESPACE_URL, f"ai-tools-directory:{slug}")
                 ),
                 "slug": slug,
-                "category": row["Category"].strip(),
+                "category": CATEGORY_MAP.get(
+                    row["Category"].strip(),
+                    row["Category"].strip(),
+                ),
                 "name": name,
                 "bestFor": row["Best for"].strip(),
                 "pricing": row["Access / Pricing"].strip(),

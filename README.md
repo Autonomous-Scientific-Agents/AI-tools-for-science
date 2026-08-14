@@ -67,6 +67,7 @@ Admins can open `#/admin` to approve or reject comments and submitted tools. App
 
 - `supabase/schema.sql` creates tables, indexes, RLS policies, admin helper functions, and the `tool_metrics` view.
 - `supabase/seed.sql` imports the 30 spreadsheet tools only.
+- `supabase/normalize_categories.sql` updates an existing database from the original spreadsheet category labels to the simplified public labels.
 - `scripts/extract_tools.py` regenerates `src/data/seedTools.ts` and `supabase/seed.sql` from the workbook.
 
 To regenerate after editing the workbook:
