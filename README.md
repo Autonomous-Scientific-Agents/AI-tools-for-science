@@ -1,6 +1,12 @@
 # AI Tools Directory
 
+[![Deploy to GitHub Pages](https://github.com/Autonomous-Scientific-Agents/AI-tools-for-science/actions/workflows/deploy.yml/badge.svg)](https://github.com/Autonomous-Scientific-Agents/AI-tools-for-science/actions/workflows/deploy.yml)
+[![Website](https://img.shields.io/badge/website-live-196b63)](https://autonomous-scientific-agents.github.io/AI-tools-for-science/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-deployed-222222?logo=githubpages)](https://autonomous-scientific-agents.github.io/AI-tools-for-science/)
+
 Public AI tools directory built with React, TypeScript, Vite, Tailwind CSS, and Supabase.
+
+Live site: https://autonomous-scientific-agents.github.io/AI-tools-for-science/
 
 The directory imports all tools from `AI_Tools_Updated_with_Open_Science.xlsx`. Ratings, comments, and use counts are not seeded; they are collected from visitors through Supabase.
 
