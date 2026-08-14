@@ -1,4 +1,4 @@
--- Generated from AI_Tools_Updated_with_Open_Science.xlsx, sheet: AI Tools
+-- Generated from ai_tools_2026.xlsx, sheet: AI Tools
 -- Ratings, comments, and use counts are intentionally not seeded.
 
 insert into public.tools (

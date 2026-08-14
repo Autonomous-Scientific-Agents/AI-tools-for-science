@@ -18,7 +18,7 @@ from xml.etree import ElementTree as ET
 from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
-WORKBOOK = ROOT / "AI_Tools_Updated_with_Open_Science.xlsx"
+WORKBOOK = ROOT / "ai_tools_2026.xlsx"
 SEED_TS = ROOT / "src" / "data" / "seedTools.ts"
 SEED_SQL = ROOT / "supabase" / "seed.sql"
 
@@ -176,7 +176,7 @@ def write_seed_sql(records: list[dict[str, str]]) -> None:
         "moderation_status",
     ]
     lines = [
-        "-- Generated from AI_Tools_Updated_with_Open_Science.xlsx, sheet: AI Tools",
+        "-- Generated from ai_tools_2026.xlsx, sheet: AI Tools",
         "-- Ratings, comments, and use counts are intentionally not seeded.",
         "",
         "insert into public.tools (",
