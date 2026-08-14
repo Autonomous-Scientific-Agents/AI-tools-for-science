@@ -8,6 +8,8 @@ Public AI tools directory built with React, TypeScript, Vite, Tailwind CSS, and 
 
 Live site: https://autonomous-scientific-agents.github.io/AI-tools-for-science/
 
+This project started as a curated list of AI tools for students in the [Intro to HPC Undergraduate Bootcamp](https://intro-hpc-bootcamp.alcf.anl.gov/).
+
 The directory imports all tools from `AI_Tools_Updated_with_Open_Science.xlsx`. Ratings, comments, and use counts are not seeded; they are collected from visitors through Supabase.
 
 ## Features
